@@ -1,15 +1,78 @@
 <!DOCTYPE html>
-<html>  
+<html>
 
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Loan Calculator</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="/img/empireLogo.jpg" width="80" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+
+        <a class="navbar-item" href="yoda.html">
+          Yoda 
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
   <!--This section will visually contain the fields to input values req'ed to do calculations-->
   <!--Start First Section-->
   <section class="section">
@@ -18,33 +81,45 @@
         <h1>Simple Loan Calculator</h1>
         <p>The Simple Loan Calculator will calculate your estimated payments for loan amounts and interest rates.</p>
       </div>
-      
+
       <!--From here on down in this section visuals for the values required and their info text will be positioned in column format bulma css will be used to structure the columns accordingly-->
 
-      <div class="columns"> <!--This div will be container for columns-->
-        <div class="column is-three-quarters"> <!--The container will be set to take up 3/4's of the screen space-->
-          <div class="card"> <!--Bulma CSS class that is what it physically describes. After looking at rendered page, it does visually look like a card. Container to house the input value fields and calc button-->
-            <!--Start Form-->            
+      <div class="columns">
+        <!--This div will be container for columns-->
+        <div class="column is-three-quarters">
+          <!--The container will be set to take up 3/4's of the screen space-->
+          <div class="card">
+            <!--Bulma CSS class that is what it physically describes. After looking at rendered page, it does visually look like a card. Container to house the input value fields and calc button-->
+            <!--Start Form-->
             <form id="loan-form">
               <!--first level-->
-              <div class="level"> <!--Bulma CSS class that create a container for putting contents in horizontal display-->
+              <div class="level">
+                <!--Bulma CSS class that create a container for putting contents in horizontal display-->
                 <!--Visually it looks like this: "number  text  input-field "-->
                 <!--Left of level Container-->
-                <div class="level-left is-marginless"> <!--Class name describes where we want this container to be inside the level container that is inside the card container-->
+                <div class="level-left is-marginless">
+                  <!--Class name describes where we want this container to be inside the level container that is inside the card container-->
                   <div class="level-item">
-                    <p class="number">1</p> <!--I am not sure how the 1 has a gray circle background. The docs doesnt say it renders that way or how to do it.-->
+                    <p class="number">1</p>
+                    <!--I am not sure how the 1 has a gray circle background. The docs doesnt say it renders that way or how to do it.-->
                     Loan Amount
                   </div>
                 </div>
 
                 <!--Right side of level container-->
-                <div class="level-right"> <!--describe where in the level container we want this container to be positioned-->
-                  <div class="level-item"> <!--assign this container to the level container; for position purposes?-->
-                    <div class="field">   <!--setup for the input-->
-                      <div class="control has-icons-left"> <!--icons to be put inside the input field are put on the left-->
+                <div class="level-right">
+                  <!--describe where in the level container we want this container to be positioned-->
+                  <div class="level-item">
+                    <!--assign this container to the level container; for position purposes?-->
+                    <div class="field">
+                      <!--setup for the input-->
+                      <div class="control has-icons-left">
+                        <!--icons to be put inside the input field are put on the left-->
                         <input class="input" id="amount" type="number" />
-                        <span class="icon is-small is-left">  <!--setup for an icon to be used and its position in the span-->
-                          <i class="fa fa-dollar-sign"></i> <!--Assign which icon to be used-->
+                        <span class="icon is-small is-left">
+                          <!--setup for an icon to be used and its position in the span-->
+                          <i class="fa fa-dollar-sign"></i>
+                          <!--Assign which icon to be used-->
                         </span>
                       </div>
                     </div>
@@ -52,19 +127,21 @@
                 </div>
               </div>
               <!--Second level-->
-              <div class="level"> <!--continer for the next horizontal set of columns-->
+              <div class="level">
+                <!--continer for the next horizontal set of columns-->
                 <div class="level-left is-marginless">
                   <div class="level-item">
                     <p class="number">2</p>
-                    Interest Rate 
+                    Interest Rate
                   </div>
                 </div>
 
                 <div class="level-right">
                   <div class="level-item">
                     <div class="field">
-                      <div class="control has-icons-right"> <!--put the percent icon to the right of the span-->
-                        <input class="input" id="interest" type="number"/>
+                      <div class="control has-icons-right">
+                        <!--put the percent icon to the right of the span-->
+                        <input class="input" id="interest" type="number" />
                         <span class="icon is-small is-right">
                           <i class="fa fa-percentage"></i>
                         </span>
@@ -86,7 +163,7 @@
                   <div class="level-item">
                     <div class="field">
                       <div class="control has-icons-left">
-                        <input class="input" id="years" type="number"/>
+                        <input class="input" id="years" type="number" />
                         <span class="icon is-small is-left">
                           <i class="fa fa-calender"></i>
                         </span>
@@ -94,7 +171,7 @@
                     </div>
                   </div>
                 </div>
-              </div> 
+              </div>
 
               <!--Calculate Button Calculate Level-->
               <div class="control">
@@ -128,17 +205,17 @@
           <p class="subtitle is-4">Total Interest</p>
         </div>
       </div>
-      
+
       <div class="column is-12-tablet is-6-desktop is-3-widescreen">
         <div class="notification is-link has-text">
           <p id="totalPayment" class="title is-1">$</p>
           <p class="subtitle is-4">Total Amount</p>
         </div>
       </div>
-</div>
-
     </div>
   </section>
-  <script src="scripts.js"></script>
+
+  <script src="/scripts/indexScript.js"></script>
 </body>
+
 </html>
