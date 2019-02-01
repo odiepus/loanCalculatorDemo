@@ -29,3 +29,14 @@ function addFunc(e){
 
   e.preventDefault();
 }
+
+document.getElementById("next").addEventListener("click", nextProblem);
+
+function nextProblem(){
+  var buttonText = document.getElementById("next").innerText;
+
+  if(buttonText == "Next"){
+    window.location.reload();
+    document.getElementById("answer").value = "";
+  }
+}
