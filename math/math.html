@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>     <!--Set the charset-->
+
+    <!--viewport allows page to be rendered for specific devices-->
+    <!--we can set the width with the content part as well as the scale-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Allows the use of bulma css classes so I dont have to actually do any css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <!--fonts and icons that are used by bulma css-->
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+
+  <body>
+    <!--Navigation bar at top of page. I want all pages to have this bar but at this point I dont know how to write it up once and have all pages use this, so I have to write up for each page.-->
+
+    <!--START NAVBAR-->
+    <!--Start with a navbar container and give it the role of navigation -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+      <!--Use navbar-brand to id this container as the brand/logo of page or site-->
+      <div class="navbar-brand">
+        <a class="navbar-item" href="math/math.html">
+          <img src="../img/math.png" width="80" height="28">
+        </a>
+
+        <!--This part is hidden on desktops. It should only be visible when on small devices-->
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!--This is the container that will house the navbar contents. NOTE: navbar container should have a navbar-start and navbar-end child containers. This is bulma css specific-->
+      <div id="navbarBasicExample" class="navbar-menu is-active">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            Home
+          </a>
+          
+          <a class="navbar-item" href="yoda.html">
+            Yoda
+          </a>
+
+          <a class="navbar-item" href="math.html">
+            Math
+          </a>
+
+          <!--Example of a dropdown menu-->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+
+              <a class="navbar-item">
+                Jobs
+              </a>
+
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--END NAVBAR-->
+
+    <section class="section">
+      <h1 class="title">Choose which operation to practice on</h1>
+      <div class="columns">
+
+        <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="box has-text-centered has-background-primary">
+            <a class="button" href="add.html">
+              <strong>Addition</strong>
+            </a>
+          </div>
+        </div>
+        <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="box has-text-centered has-background-link">
+            <a class="button" href="sub.html">
+              <strong>Subtraction</strong>
+            </a>
+          </div>
+        </div>
+        <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="box has-text-centered has-background-success">
+            <a class="button" href="mult.html">
+              <strong>Multiplication</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </body>
+</html>

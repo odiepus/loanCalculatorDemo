@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!--Set the charset-->
+
+  <!--viewport allows page to be rendered for specific devices-->
+  <!--we can set the width with the content part as well as the scale-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--Allows the use of bulma css classes so I dont have to actually do any css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <!--fonts and icons that are used by bulma css-->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <!--Navigation bar at top of page. I want all pages to have this bar but at this point I dont know how to write it up once and have all pages use this, so I have to write up for each page.-->
+
+  <!--START NAVBAR-->
+  <!--Start with a navbar container and give it the role of navigation -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <!--Use navbar-brand to id this container as the brand/logo of page or site-->
+    <div class="navbar-brand">
+      <a class="navbar-item" href="math/math.html">
+        <img src="../img/math.png" width="80" height="28">
+      </a>
+
+      <!--This part is hidden on desktops. It should only be visible when on small devices-->
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!--This is the container that will house the navbar contents. NOTE: navbar container should have a navbar-start and navbar-end child containers. This is bulma css specific-->
+    <div id="navbarBasicExample" class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html">
+          Home
+        </a>
+
+        <a class="navbar-item" href="../yoda.html">
+          Yoda
+        </a>
+
+        <a class="navbar-item" href="math.html">
+          Math
+        </a>
+
+        <!--Example of a dropdown menu-->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+
+            <a class="navbar-item">
+              Jobs
+            </a>
+
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--END NAVBAR-->
+  <div id="additionOp">
+    <section class="section">
+      <div class="container has-text-centered has-background-light">
+        <div class="columns is-multiline">
+          <div class="column is-one-fifth is-size-3" id="op1">
+            X
+          </div>
+          <div class="column is-one-fifth is-size-3">
+            +
+          </div>
+          <div class="column is-one-fifth is-size-3" id="op2">
+            Y
+          </div>
+          <div class="field">
+            <div class="control is-size-7">
+              Your Answer
+              <input class="input is-primary " type="text" id="answer" placehoder="Input your answer here">
+            </div>
+          </div>
+          <div class="column is-one-fifth">
+            <div class="control">
+              <button id="submission" class="button is-rounded is-primary ">Check Answer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container has-background-light">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item is-size-3">
+              <p>Your answer:</p>
+            </div>
+          </div>
+
+          <div class="level-right">
+            <div class="level-item is-size-3">
+              <p id="userAnswer">Your answer will appear here after you submit.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container has-text-centered has-background-light">
+
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item is-size-3">
+              <p>Answer:</p>
+            </div>
+          </div>
+
+          <div class="level-right">
+            <div class="level-item is-size-3">
+              <p id="correctAnswer">Correct answer will appear here after you submit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="../scripts/addScript.js"></script>
+</body>
+
+
+</html>
